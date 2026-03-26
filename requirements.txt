@@ -1,0 +1,6 @@
+fastapi==0.102.0
+uvicorn[standard]==0.23.2
+requests==2.32.0
+python-jose==3.3.0
+cryptography==41.0.0
+python-dotenv==1.0.0

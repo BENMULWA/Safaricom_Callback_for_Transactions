@@ -1,0 +1,18 @@
+version: "3.9"
+
+services:
+  query_transaction_api:
+    build: .
+    container_name: query_transaction_api
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    volumes:
+      - ./app:/app/app
+      - ./certificate:/app/certificate:ro
+    command: >
+      uvicorn app.main:app
+      --host 0.0.0.0
+      --port 8000
+      --reload
